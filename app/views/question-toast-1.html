@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/start.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What kind of toast do you like?</h1>
+
+      <form class="form" action="/question-toast-2" method="post">
+
+        <p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Select a choice of bread type
+                </h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bread-type" name="bread-type" type="radio" value="cornbread">
+                  <label class="govuk-label govuk-radios__label" for="bread-type">
+                    Corn bread
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bread-type-2" name="bread-type" type="radio" value="sweetbread">
+                  <label class="govuk-label govuk-radios__label" for="bread-type-2">
+                    Sweet bread
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bread-type-3" name="bread-type" type="radio" value="naanbread">
+                  <label class="govuk-label govuk-radios__label" for="bread-type-3">
+                    Naan bread
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bread-type-4" name="bread-type" type="radio" value="oatbread">
+                  <label class="govuk-label govuk-radios__label" for="bread-type-4">
+                    Oat bread
+                  </label>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+        </p>
+
+        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
