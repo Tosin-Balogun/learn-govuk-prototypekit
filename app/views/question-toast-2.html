@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <a class="govuk-back-link" href="/question-toast-1.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,19 @@
 
       <form class="form" action="/check-your-answers" method="post">
 
-        <p>[Insert question content here]</p>
+        <p>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="more-detail">
+                Please provide detail of how you like your spread
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+              You can provide as much details as you think is necessary, after all, it's important to get the detail just right :).
+            </div>
+            <textarea class="govuk-textarea" id="spread-type" name="spread-type" rows="5" aria-describedby="more-detail-hint" >{{ data['spread-type']}}</textarea>
+          </div>
+        </p>
 
         <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
 
