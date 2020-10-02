@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+   GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Gluten allergy warning
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        You have answered yes about having an allergy for gluten.
+      </p>
+
+      <div class="govuk-inset-text">
+        <p>
+        A severe wheat allergy can also cause anaphylaxis, which can make your throat swell, and can send the body into shock. Anaphylaxis is life-threatening and requires immediate medical attention.
+      </p>
+      </div>
+      
+
+      <h2 class="govuk-heading-m">What to do next</h2>
+
+      <p>We strongly recommend thinking about the impliations of sacrificing short term rewards for long term status of your health. As detailed above, the consequence of trying to follow through with this decision can be injurious, <a href="/start">please leave this page</a></p>
+
+      
+
+      <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+        </li>
+        <li>
+          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

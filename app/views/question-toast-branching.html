@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/start.html">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/question-toas"> Allergy </a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/question-toast-1"> Bread type </a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/question-toast-2"> Spread type </a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <form action="/question-toast-failure" method="post" class="form">
+        {{ govukRadios({
+        "idPrefix": "gluten-allergy",
+        "name": "gluten-allergy",
+        "fieldset": {
+          "legend": {
+            "text": "Do you have gluten allergy?",
+            "classes": "govuk-fieldset__legend--xl",
+            "isPageHeading": true
+          }
+        },
+        "items": [
+          {
+            "value": "Yes",
+            "text": "Yes",
+            "name": "Yes",
+            "checked": checked("gluten-allergy", "Yes")
+          },
+          {
+            "value": "No",
+            "text": "No",
+            "name": "No",
+            "checked": checked("gluten-allergy", "No")
+          }
+        ]
+      }) }}
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
